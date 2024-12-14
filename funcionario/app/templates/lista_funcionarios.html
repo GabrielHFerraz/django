@@ -1,0 +1,17 @@
+<!DOCTYPE html> {% load django_bootstrap5 %} <html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listagem de Funcionários</title> {% bootstrap_css %} {% bootstrap_javascript %}
+</head>
+
+<body>
+    <h1> Listagem de Funcionários</h1> {% for funcionario in object_list %} <li>{{ funcionario.nome }}</li>
+    <li>{{ funcionario.cpf }}</li>
+    <li>{{ funcionario.email }}</li>
+    <li>{{ funcionario.remuneracao }}</li>
+    <hr> {% endfor %}
+</body>
+
+</html>
