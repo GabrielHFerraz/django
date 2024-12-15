@@ -8,6 +8,7 @@ class FuncionarioCreateView(CreateView):
     model = Funcionario
     fields = "__all__"
     template_name = "form_funcionario.html"
+    success_url = reverse_lazy("lista_funcionarios")
 
 class FuncionarioListView(ListView):
     model = Funcionario
@@ -25,6 +26,6 @@ class FuncionarioUpdateView(UpdateView):
     success_url = reverse_lazy("lista_funcionarios")
 
 class FuncionarioDeleteView(DeleteView):
-    model = Funcionario
+    model = Funcionario        
     template_name = "remover_funcionario.html"
     success_url = reverse_lazy("lista_funcionarios")

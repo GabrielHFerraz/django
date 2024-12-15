@@ -8,22 +8,31 @@
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 </head>
 
-<body>
+<body style="padding: 10px;">
     <h2> Funcionário: </h2>
-    <form> 
-        <label for="fname" class="form-label">Nome:</label><br> 
-        <input type="text" id="fname" name="fname" class="form-control" value={{fun.nome}} readonly><br> 
-        
-        <label for="cpf" class="form-label">CPF:</label><br>
-        <input type="text" id="cpf" name="cpf" class="form-control" value={{fun.cpf}} readonly><br> 
-        
-        <label for="email" class="form-label">E-mail:</label><br> 
-        <input type="text" id="email" name="email" class="form-control" value={{fun.email}} readonly><br> 
-        
-        <label for="remunera" class="form-label">Remuneração:</label><br> 
-        <input type="text" id="remunera" name="remunera" class="form-control" value={{fun.remuneracao}} readonly><br>
-        <br /> 
-    
+    <form>
+        <div class="col-4">
+            <label for="fname" class="form-label">Nome:</label><br>
+            <input type="text" id="fname" name="fname" class="form-control" value={{object.nome}} readonly><br>
+        </div>
+
+        <div class="col-3">
+            <label for="email" class="form-label">E-mail:</label><br>
+            <input type="text" id="email" name="email" class="form-control" value={{object.email}} readonly><br>
+        </div>
+
+        <div class="col-1">
+            <label for="cpf" class="form-label">CPF:</label><br>
+            <input type="text" id="cpf" name="cpf" class="form-control" value={{object.cpf}} readonly><br>
+        </div>
+
+        <div class="col-1">
+            <label for="remunera" class="form-label">Remuneração:</label><br>
+            <input type="text" id="remunera" name="remunera" class="form-control" value={{object.remuneracao}}
+                readonly><br>
+        </div>
+        <br />
+
     </form>
     <form method="post"> {% csrf_token %} <button type="button" class="btn btn-success" onClick="history.go(-1)"> Voltar
         </button> </form> <!-- Option 1: Bootstrap Bundle with Popper -->

@@ -10,12 +10,26 @@
     {% bootstrap_javascript %}
 </head>
 
-<body>
-    <h2> Funcionário: {{ fun.nome }} </h2>
-    <li>CPF: {{ fun.cpf }}</li>
-    <li>E-mail: {{ fun.email }}</li>
-    <li>Remuneração: {{ fun.remuneracao }}</li>
-    <form method="post" action="{% url 'remover_funcionario' fun.id %}">
+<body style="padding: 10px;">
+    <h2> Funcionário: {{ object.nome }} </h2>    
+
+    <form method="post" >
+       
+        <div class="col-2">
+            <label for="femail" class="form-label">Email:</label><br> 
+            <input type="text" id="femail" name="femail" class="form-control" value={{object.email}} readonly><br> 
+        </div>
+
+        <div class="col-1">
+            <label for="fcpf" class="form-label">CPF:</label><br> 
+            <input type="text" id="fcpf" name="fcpf" class="form-control" value={{object.cpf}} readonly><br> 
+        </div>
+               
+        <div class="col-1">
+            <label for="remunera" class="form-label">Remuneração:</label><br> 
+            <input type="text" id="remunera" name="remunera" class="form-control" value={{object.remuneracao}} readonly><br>
+        </div>
+
         {% csrf_token %}
         <button type="submit" class="btn btn-danger">Remover</button>
         <button type="button" class="btn btn-success" onClick="history.go(-1)">Voltar</button>
