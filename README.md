@@ -31,12 +31,12 @@ O projeto segue a estrutura padrão do Django, com os seguintes diretórios prin
 
 1. Clone este repositório em sua máquina local:
    ```bash
-   git clone https://github.com/seu-usuario/nome-do-repositorio.git
+   git clone https://github.com/GabrielHFerraz/django.git
    ```
 
 2. Acesse o diretório do projeto:
    ```bash
-   cd nome-do-repositorio
+   cd django\    
    ```
 
 3. Crie e ative um ambiente virtual (opcional, mas recomendado):
