@@ -10,12 +10,19 @@
     {% bootstrap_javascript%}
 </head>
 
-<body>
+<body style="padding: 10px;">
     <form method="post">
-        {% csrf_token %}
+
         {% bootstrap_form form %}
-        <input type="submit" class="btn btn-primary" value="Cadastrar"></input>
+        {% csrf_token %}
+        
+        <button type="submit" class="btn btn-primary">Salvar</button>
+        <button type="button" class="btn btn-success" onClick="history.go(-1)">Voltar</button>
+
+       
     </form>
+    
+    
 </body>
 
 </html>
